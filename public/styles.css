@@ -1,0 +1,45 @@
+body{
+    background-color: black;
+    text-align: center;
+    color: white;
+    margin: 0;
+}
+
+.App .Header{
+    border-bottom: 1px solid white;
+}
+
+.App .Board{
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+.App .Board .Word{
+    display: block;
+    margin: 0 auto;
+}
+
+.App .Board .Word .Latter{
+    background-color: gray;
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0;
+    border: 2px solid black;;
+}
+
+.App .KeyBoard .Row{
+    display: block;
+}
+
+.App .KeyBoard .Row button{
+    display: inline-block;
+    min-width: 50px;
+    font-size: 25px;
+    margin: 2px;
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    border-radius: 10px;
+}
