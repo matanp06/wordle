@@ -3,8 +3,9 @@ import Header from "./Header";
 import Board from "./Board";
 import wordsList from "./wordsList";
 import KeyBoard from "./KeyBoard";
+import GameOver from "./GameOver";
 
-const riddle = wordsList[Math.floor(Math.random()*wordsList.length)];
+let riddle = wordsList[Math.floor(Math.random()*wordsList.length)];
 console.log(riddle);
 
 function App() {
@@ -17,9 +18,13 @@ function App() {
   const [incorrectPlaceLetters, setIncorrectPlaceLetters] = useState([]);
   const [correctPlaceLetters,setCorrectPlaceLetters] = useState([]);
   const [win,setWin] = useState(false);
+  const [gameOver, setGameOver] = useState(false);
 
   useEffect(()=>{
-    win ? alert("success") : attemptNumber==6&&alert("GAME OVER")
+    if((win)||(attemptNumber===6)){
+      setGameOver(true);
+    }
+    // win ? alert("success") : attemptNumber==6&&alert("GAME OVER")
   },[win,attemptNumber]);
 
   // update the guess word (before submitted)
@@ -86,6 +91,22 @@ function App() {
     setAttemptNumber(attemptNumber+1);
   }
 
+  //reset the secret word and restarts the game
+  function restartGame(){
+
+    setGameOver(false);
+    setWin(false);
+    riddle = wordsList[Math.floor(Math.random()*wordsList.length)];
+    console.log(riddle);
+    setAttemptedWords([null,null,null,null,null,null]);
+    setAttemptNumber(0);
+    setAttempt("");  
+    setNotIncludedLetters([]);
+    setIncorrectPlaceLetters([]);
+    setCorrectPlaceLetters([]);
+
+  }
+
   return (
     <div className="App">
       <Header/>
@@ -101,8 +122,14 @@ function App() {
           }
         }
       />
+      {gameOver && <GameOver 
+        won={win}
+        restartGame={restartGame}
+        exitGame={()=>{setGameOver(false)}}
+      />}
     </div>
   );
 }
 
 export default App;
+export {riddle};

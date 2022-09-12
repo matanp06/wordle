@@ -21,8 +21,9 @@ changed according the following rules:
 ## To Do next:
 - [x] Fix the keyboard display on moblie devices
 - [x] Change colors for better view of the letters.
-- [ ] Add a restart option.
-- [ ] Reveal the secret word when the user losed.
+- [x] Add a restart option.
+- [x] Reveal the secret word when the user losed.
+- [ ] update the readme and images.
 
 ## gallery
 New game:

@@ -45,6 +45,43 @@ body{
     cursor: pointer;
 }
 
+.App .game-over{
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #f0ffff9c;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    color: black;
+
+}
+
+.App .game-over p{
+    font-size: 20px;
+}
+
+.App .game-over button{
+    margin: 0 20px;
+    padding: 10px;
+}
+
+.App .game-over button p{
+    color: black;
+    font-size: 20px;
+    margin: 5px 0;
+}
+
+.App .game-over button img{
+    width: 100px;
+    height: 100px;
+}
+
 @media (max-width:750px) {
     .App .Board{
         margin-bottom: 50px;
