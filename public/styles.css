@@ -42,4 +42,41 @@ body{
     color: black;
     border: 1px solid black;
     border-radius: 10px;
+    cursor: pointer;
+}
+
+@media (max-width:750px) {
+    .App .Board{
+        margin-bottom: 50px;
+    }
+    .App .KeyBoard .Row button{
+        font-size: 20px;
+        min-width: 40px;
+        margin: 1px;
+        padding: 5px;
+    }
+}
+
+@media (max-width:550px) {
+    .App .KeyBoard .Row button{
+        min-width: 35px;
+    }
+}
+
+@media (max-width:450px) {
+    .App .KeyBoard .Row button{
+        min-width: 30px;
+    }
+}
+
+@media (max-width:400px) {
+    .App .KeyBoard .Row button{
+        min-width: 27px;
+    }
+}
+
+@media (max-width:350px) {
+    .App .KeyBoard .Row button{
+        padding: 3px;
+    }
 }

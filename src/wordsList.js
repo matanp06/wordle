@@ -323,6 +323,7 @@ const wordsList = [
     "ABATE",
     "BENCH",
     "QUIET",
+    "COLOR",
     "GRADE",
     "STINK",
     "KARMA",

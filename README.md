@@ -19,8 +19,8 @@ changed according the following rules:
 * Gray - the letter is not in the word.
 
 ## To Do next:
-- [ ] Fix the keyboard display on moblie devices
-- [ ] Change colors for better view of the letters.
+- [x] Fix the keyboard display on moblie devices
+- [x] Change colors for better view of the letters.
 - [ ] Add a restart option.
 - [ ] Reveal the secret word when the user losed.
 

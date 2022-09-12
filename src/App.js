@@ -63,7 +63,7 @@ function App() {
         } else { // the letter is in the wrong place
           !correctPlaceLetters.includes(letter) && !incorrectPlaceLetters.includes(letter) &&
             setIncorrectPlaceLetters(incorrectLetters=> [...incorrectLetters,letter]);
-          return({letter:letter,style:{backgroundColor:"yellow"}});
+          return({letter:letter,style:{backgroundColor:"#ffff00a6"}});// A tint of yellow
         }
 
       }
